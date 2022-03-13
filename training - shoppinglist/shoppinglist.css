@@ -70,6 +70,9 @@ body {
   border: none;
 }
 
-.plus-botton {
-  background-color: ;
+i {
+  font-size: 52px;
+  background-color: white;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.9);
 }
