@@ -41,12 +41,33 @@ function listAdding()   {
     deleting.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
     listDiv.appendChild(deleting);
 
+
     listName.appendChild(listDiv);
+
+
+
+    deleting.addEventListener("click", (e) =>{
+        const target = e.target.parentElement;
+        target.parentElement.remove();
+    })
+    
+
+
+
+
 }
 
 
 
+
 listForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    listAdding();
+})
+
+const checkBtn = document.querySelector(".list-form i");
+
+checkBtn.addEventListener("click", (e) => {
     e.preventDefault();
     listAdding();
 })
