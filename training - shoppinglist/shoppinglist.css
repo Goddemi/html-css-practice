@@ -58,8 +58,8 @@ ul {
 .shopping-window {
   background: linear-gradient(70deg, cornflowerblue, lavenderblush);
   box-shadow: 8px 8px 10px rgba(207, 200, 216, 0.8);
-  width: var(--main-widthpercent);
-  height: 65%;
+  width: 350px;
+  height: 470px;
   border-radius: 20px;
   margin: auto;
   margin-top: 7%;
@@ -106,6 +106,6 @@ ul {
 .list-form i {
   font-size: 58px;
   position: absolute;
-  top: 25.5px;
+  top: 25px;
   color: rgba(0, 0, 0, 0.8);
 }
