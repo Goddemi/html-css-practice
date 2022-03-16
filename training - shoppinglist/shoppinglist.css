@@ -71,6 +71,7 @@ ul {
   height: 68%;
   position: relative;
   top: 50px;
+  overflow-y: auto;
 }
 
 .list-name {
@@ -101,6 +102,7 @@ ul {
   width: 99%;
   height: 25px;
   border: none;
+  outline: none;
 }
 
 .list-form i {
@@ -108,4 +110,11 @@ ul {
   position: absolute;
   top: 25px;
   color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.garbageIcon:hover {
+  color: red;
+  transform: scale(1.2);
+  cursor: pointer;
 }
