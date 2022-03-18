@@ -28,35 +28,34 @@ const listName = shoppingWindow.querySelector(".list-name");
 const checkBtn = listForm.querySelector("i");
 
 
-function listAdding()   {
+function listAdding() {
     if (listInput.value !== "") {
     const listValue = listInput.value;
     listInput.value = "";
 
-    const listDiv = document.createElement("div");
+    const listRow = document.createElement("div");
+    listRow.setAttribute("class", "list-row");
 
-    const listing = document.createElement("li");
-    listing.innerHTML = listValue;
-    listing.style.listStyle = "none";
-    listDiv.appendChild(listing);
+    listRow.innerHTML = `
+    <li>${listValue}</li>
+    <div class="garbageIcon">
+        <i class="fa-solid fa-trash-can"></i>
+    </div>`
 
-    const deleting = document.createElement("div");
-    deleting.setAttribute("class", "garbageIcon");
-    deleting.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
-    listDiv.appendChild(deleting);
+    listName.appendChild(listRow);
 
-
-    listName.appendChild(listDiv);
-
-
-    deleting.addEventListener("click", (e) =>{
-        const target = e.target.parentElement;
-        target.parentElement.remove();
-    })
     
     listDiv.scrollIntoView({block:"center"});
 }}
 
+
+shoppingWindow.addEventListener("click", (e) => {
+    if (e.target.nodeName =="I") {
+        const deletingChild = e.target.parentElement;
+        const deletingContent = deletingChild.parentElement;
+                deletingContent.remove();
+    }
+})
 
 
 listForm.addEventListener("submit", (e) =>{
