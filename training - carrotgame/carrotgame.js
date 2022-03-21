@@ -11,6 +11,7 @@ const playIcon = document.querySelector("button i");
 playstopBtn.addEventListener("click",() => {
     carrotBugHandler();
     playStopChange();
+    timerHandler()
 })
 
 function playStopChange() {
@@ -24,7 +25,7 @@ function playStopChange() {
 }};
 
 
-//main carrot , bug
+//main carrot , bug setting
 
 const main = document.querySelector("main");
 const carrots = document.querySelectorAll(".carrot");
@@ -64,6 +65,27 @@ function distribution(e) {
 carrotBugHandler();
 
 
+
+// timer
+
+
+const timer = document.querySelector(".time");
+let sec = 9;
+let milisec = 99;
+
+function timerHandler() {
+    let timerInterval = setInterval(() => {
+        milisec = --milisec;
+        timer.innerHTML = `${sec} : ${String(milisec).padStart(2,"0")}`;
+        if (milisec < 0) {
+            sec = --sec;
+            milisec = 99;
+            timer.innerHTML = `${sec} : ${String(milisec).padStart(2,"0")}`;
+        } else if (sec == 0 && milisec == 0) {
+            clearInterval(timerInterval);
+        }
+    }, 10);
+}
 
 
 
