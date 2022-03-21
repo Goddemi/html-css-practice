@@ -27,7 +27,11 @@ header {
   justify-content: center;
   width: 100%;
   height: 48%;
-  margin-bottom: 70px;
+}
+
+main {
+  width: 100%;
+  height: 52%;
 }
 
 .playstop__btn {

@@ -1,32 +1,16 @@
 
 
+
+
+//play button
+
+const header = document.querySelector("header")
 const playstopBtn = document.querySelector(".playstop__btn")
-const main = document.querySelector("main");
-const carrots = document.querySelectorAll(".carrot");
-const bugs = document.querySelectorAll(".bug");
 const playIcon = document.querySelector("button i");
-
-
-function carrotBugHandler() {
-carrots.forEach(carrot => distribution(carrot));
-bugs.forEach(bug => distribution(bug));
-}
-
-function distribution(e) {
-    const randomWidth = Math.floor(Math.random()*1300); //이 숫자를 정확하게 캐치할 수 있었으면 좋겠다. 곱해주는 숫자. 
-    const randomHeight = Math.floor(Math.random()*150);
-
-    e.style.transform= `translate(${randomWidth}px, ${randomHeight}px)`;
-
-}
-
-carrotBugHandler();
-
 
 playstopBtn.addEventListener("click",() => {
     carrotBugHandler();
     playStopChange();
-
 })
 
 function playStopChange() {
@@ -38,4 +22,51 @@ function playStopChange() {
         playIcon.classList.remove("fa-stop");
         playIcon.classList.add("fa-play")
 }};
+
+
+//main carrot , bug
+
+const main = document.querySelector("main");
+const carrots = document.querySelectorAll(".carrot");
+const bugs = document.querySelectorAll(".bug");
+
+
+
+
+const imgSize = (document.querySelector(".carrot")).clientWidth; // carrot , bug 사이즈가
+
+function carrotBugHandler() {
+carrots.forEach(carrot => distribution(carrot));
+bugs.forEach(bug => distribution(bug));
+}
+
+
+function randomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+
+function distribution(e) {
+    const mainWidth = main.clientWidth;
+    const mainHeight = main.clientHeight;
+
+    const randomWidth = randomNumber(0, mainWidth - imgSize);
+    const randomHeight = randomNumber(0, mainHeight - imgSize);
+    
+
+    // const randomWidth = Math.floor(Math.random()*1300); //이 숫자를 정확하게 캐치할 수 있었으면 좋겠다. 곱해주는 숫자. 
+    // const randomHeight = Math.floor(Math.random()*150);
+
+    e.style.transform= `translate(${randomWidth}px, ${randomHeight}px)`;
+
+}
+
+carrotBugHandler();
+
+
+
+
+
+
+
 
