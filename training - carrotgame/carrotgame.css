@@ -32,6 +32,7 @@ header {
 main {
   width: 100%;
   height: 52%;
+  visibility: hidden;
 }
 
 .playstop__btn {
@@ -89,7 +90,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform: translate(95%, -30%);
+  transform: translate(92.5%, -160%);
 }
 
 .replay {
@@ -108,4 +109,9 @@ footer {
 .result__value {
   color: white;
   font-size: 35px;
+}
+
+.carrot,
+.bug {
+  transition: transform 100ms ease-in-out;
 }
