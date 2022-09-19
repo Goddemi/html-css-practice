@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+  /* overflow : hidden 사용자가 스크롤링 못하게 하고 싶을때 쓸 수 있다. */
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: blanchedalmond;
+  margin: 3px;
+}
+
+.box:nth-child(6) {
+  background-color: orange;
+}
+
+.buttons {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+}

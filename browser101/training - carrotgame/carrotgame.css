@@ -1,0 +1,117 @@
+@import "carrotreset.css";
+
+:root {
+  --main-width: 80px;
+  --main-height: 80px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: url("img/background.png") center no-repeat;
+  background-size: cover;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48%;
+}
+
+main {
+  width: 100%;
+  height: 52%;
+  visibility: hidden;
+}
+
+.playstop__btn {
+  width: var(--main-width);
+  height: var(--main-height);
+  border-radius: 10px;
+  border: 3px solid black;
+  background-color: bisque;
+  text-align: center;
+  line-height: 60px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.time {
+  margin-top: 5px;
+  width: 120px; /* 이거 왜 var(--main-witdh)*2 로 안되지 */
+  height: var(--main-height) / 2;
+
+  background-color: white;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10px;
+  border: 5px solid black;
+  font-size: 23px;
+}
+
+.carrot__count {
+  margin-top: 3px;
+  width: var(--main-width);
+  height: var(--main-height);
+  border-radius: 50%;
+  border: 3px solid black;
+  background-color: orange;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+}
+
+.carrot {
+  position: absolute;
+}
+
+.bug {
+  position: absolute;
+}
+
+footer {
+  width: 35%;
+  height: 30%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(92.5%, -160%);
+}
+
+.replay {
+  width: var(--main-width);
+  height: var(--main-height);
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: bisque;
+  margin: auto;
+  text-align: center;
+  line-height: var(--main-height);
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.result__value {
+  color: white;
+  font-size: 35px;
+}
+
+.carrot,
+.bug {
+  transition: transform 100ms ease-in-out;
+}
