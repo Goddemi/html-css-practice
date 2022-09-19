@@ -1,0 +1,48 @@
+.nav__ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+@keyframes appearbtnanimation {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.nav__friends {
+  background-color: rgba(0, 0, 0, 0.06);
+  padding: 20px 60px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  animation: appearbtnanimation 1s ease-in-out;
+}
+
+.nav__li {
+  position: relative;
+}
+
+.nav__message {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.nav__dot {
+  background-color: red;
+  display: flex;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  font-size: 0px;
+  position: absolute;
+  bottom: 15px;
+  left: 22px;
+}

@@ -1,0 +1,19 @@
+.friend__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 20px;
+}
+
+.chats__header {
+  margin-bottom: 40px;
+}
+
+.friend__title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.friend__header-icons span {
+  margin-left: 30px;
+}

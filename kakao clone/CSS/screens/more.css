@@ -1,0 +1,26 @@
+.icon-row__more {
+  margin: 35px 0px;
+}
+
+.more-suggestions__title {
+  border-top: var(--main-border);
+  padding: 30px 0px;
+}
+
+.more-suggestions__iconss {
+  display: flex;
+}
+
+.more-suggestions__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
+.more-suggestions__icon-img i {
+  color: var(--purple);
+  margin-bottom: 10px;
+}
